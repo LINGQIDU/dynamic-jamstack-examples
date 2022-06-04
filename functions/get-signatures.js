@@ -2,13 +2,11 @@ const graphql = require('./util/graphql');
 
 exports.handler = async () => {
   const { signatures } = await graphql(`
-    query {
       signatures {
         data {
           name
         }
       }
-    }
   `);
 
   return {
